@@ -32,7 +32,7 @@ preprocess_rtt.py ip
 	1. 
 plot_preprocess_rtt.py ip
 	1. 
-plot_preprocess_rtt_all.py ip
+plot_preprocess_rtt_all.py
 	1. 
 plot_rtt.py
 	1. 
