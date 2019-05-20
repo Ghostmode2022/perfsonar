@@ -41,3 +41,4 @@ plot_rtt.py
 file should be the file with ip address present in it
 ip needs to be replaced by the real ip address
 event-type - throughput, packet-loss,  packet-traces, sub-interval data
+to run the code we need to keep a database file (available in <https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz>) in the description folder. This file gives the latitude and longitude information of an ip address.  
