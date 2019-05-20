@@ -1,0 +1,43 @@
+First Phase of getting the list of metadata
+get_ip.py file
+	1. pass the filename with the list of ip as command line argument
+	2. the file containing the ip for which the tests are required to be done should in a specific format
+	3. reads the data after the third tab and strips the trailing \n in the file
+	4. stores the data in an array
+	5. the array is passed as argument when calling the trailing python program perfsonar.sh
+perfsonar.sh ip
+	1. to run this program the ip is required to be provided as a command line argument
+	2. creating directory specific to the ip provided in the command line argument
+	3. executing curl query - to get the metadata from the archive
+	4. creating the output file to store the metadata (touch command is used to create a file without any content)
+	5. calling the python script for extracting the metadata
+preprocess.py ip
+	1. open the output of the first curl command to read and seperate the metadata
+	2. open a new file to save the list of metadata
+	3. count the number of metadata 
+	4. create as many variable and store the metadata in the variablesas many as the metadata (storing the data is still not done i think - not sure)
+	5. list down the metadata in the output file
+	6. call the next script to get data regarding all or some of the event-types
+
+
+Second Phase of getting event-type related data
+perf_get_rtt.sh ip
+	1. open the output file
+	2. Get the metadata one by one
+	3. Create the directories for storing throughput, packet-loss,  packet-traces, sub-interval data particular to an ip 
+	4. Execute the curl command to get the throughput, packet-loss,  packet-traces, sub-interval data particular to an ip
+
+Third Phase of plotting the rtt vs distance graph
+preprocess_rtt.py ip
+	1. 
+plot_preprocess_rtt.py ip
+	1. 
+plot_preprocess_rtt_all.py ip
+	1. 
+plot_rtt.py
+	1. 
+
+
+file should be the file with ip address present in it
+ip needs to be replaced by the real ip address
+event-type - throughput, packet-loss,  packet-traces, sub-interval data
