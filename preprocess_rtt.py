@@ -36,10 +36,10 @@ for x in range (0, len(textM)-1):
 
 #  print metadata
   fileNameI = '/home/sid/perfsonar/data/'+sys.argv[1]+'/packet-traces/'+sys.argv[1]+'-'+metadata+'-packet-trace'+'.txt'
-  fileNameO = '/home/sid/perfsonar/data/'+sys.argv[1]+'/plot/packet-traces/'+sys.argv[1]+'-'+metadata+'-packet-trace'+'.txt'
+  fileNameO = '/home/sid/perfsonar/data/'+sys.argv[1]+'/packet-traces/'+sys.argv[1]+'-'+metadata+'-packet-trace'+'.txt'
 
   fileI = open(fileNameI, 'r')
-  fileO = open(fileNameO, 'w')
+  fileO = open(fileNameO, 'w+')
 
   textI = []
   textI = fileI.read()
@@ -100,8 +100,8 @@ fileM.close()
 
 #consolidate the data into one text file 
 text = []
-fileNameOF = '/home/sid/perfsonar/data/'+sys.argv[1]+'/plot/packet-traces/'+sys.argv[1]+'-packet-trace-consolidated'+'.txt'
-fileOF = open(fileNameOF, 'w')
+fileNameOF = '/home/sid/perfsonar/data/'+sys.argv[1]+'/packet-traces/'+sys.argv[1]+'-packet-trace-consolidated'+'.txt'
+fileOF = open(fileNameOF, 'w+')
 fileOF.write("Time_Stamp	Readable_Time	Source	Destination	Distance	RTT")
 fileOF.write("\n")
 
