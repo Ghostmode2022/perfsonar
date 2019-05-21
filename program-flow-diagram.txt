@@ -29,7 +29,14 @@ perf_get_rtt.sh ip
 
 Third Phase of plotting the rtt vs distance graph
 preprocess_rtt.py ip
-	1. 
+	1. Input file name - '/home/sid/perfsonar/data/'+sys.argv[1]+'/packet-traces/'+sys.argv[1]+'-'+metadata+'-packet-trace'+'.txt'
+	2. Output file name - '/home/sid/perfsonar/data/'+sys.argv[1]+'/packet-traces/'+sys.argv[1]+'-packet-trace-consolidated'+'.txt'
+	3. File used for operation  - '/home/sid/perfsonar/data/'+sys.argv[1]+'/packet-traces/'+sys.argv[1]+'-'+metadata+'-packet-trace-sorted.txt'
+	4. The operation  file will be contain the data as ("Time_Stamp	Readable_Time	Source	Destination	Distance	RTT")
+	5. The output file will contain ("Distance"	"RTT")
+	6. Gets the destination which is particular to a specific metadata
+	7. Converts the ip into location 
+	7. Gets the distance between the source and the destination
 plot_preprocess_rtt.py ip
 	1. 
 plot_preprocess_rtt_all.py
